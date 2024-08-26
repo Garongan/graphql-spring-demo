@@ -1,6 +1,13 @@
 type Query {
-    bookById(id: ID): Book
+    getBookById(id: ID): Book
+    getAllBooks: [Book]
 }
+
+type Mutation {
+    createBook(book: BookInput!): Book
+}
+
+# type group
 
 type Book {
     id: ID
@@ -13,4 +20,12 @@ type Author {
     id: ID
     firstName: String
     lastName: String
+}
+
+# input group
+input BookInput {
+    name: String!
+    pageCount: Int!
+    firstName: String!
+    lastName: String!
 }

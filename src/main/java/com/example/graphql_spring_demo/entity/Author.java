@@ -1,8 +1,14 @@
 package com.example.graphql_spring_demo.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
